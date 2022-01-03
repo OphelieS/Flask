@@ -1,0 +1,29 @@
+<!doctype html>
+<html>
+    <head>
+      <title>Bonjour</title>
+      <link rel ="stylesheet" type="text/css" href="{{ url_for('static', filename='main.css') }}">
+    </head>
+      {% with messages = get_flashed_messages() %}
+      {% if messages %}
+      <ul class=flashes>
+      {% for message in messages %}
+      <li>{{ message }}</li>
+      {% endfor %}
+      </ul>
+      {% endif %}
+      {% endwith %}
+
+    <body>
+        
+        {% block title %}Bonjour{% endblock %}
+        {% block content %}
+        {% if sexe == "M." %}
+            <h1> Bonjour M. {{ prenom }} {{ nom }}, votre nom d'utilisateur est {{ pseudo }}</h1>
+        {% else %}
+            <h1> Bonjour Mme {{ prenom }} {{ nom }}, votre nom d'utilisatrice est {{ pseudo }}</h1>
+        {% endif %}
+        {% endblock %}
+      <a href="{{ url_for('hello') }}"> Retourner à la page d'accueil </a>
+    </body>
+</html>

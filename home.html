@@ -1,0 +1,28 @@
+<!doctype html>
+<html>
+    <head>
+      <title>Page d'Ophélie</title>
+      <link rel ="stylesheet" type="text/css" href="{{ url_for('static', filename='main.css') }}">
+    </head>
+    <body>
+        <div class = acceuil>
+            <h1 class="multicolor"> {{ message_home }}</h1>
+            <a href="{{ url_for('suite') }}"> Cliquer sur ce lien pour aller à la page suivante </a><br>
+            <a href="{{ url_for('form') }}"> Cliquer sur ce lien pour aller à la page du formulaire </a><br>
+            <a href="{{ url_for('liste') }}"> Cliquer sur ce lien pour aller à la page des utilisateurs </a>
+        </div>
+        <div class = acceuil2>
+            <h1>Veuillez entrer votre nom</h1>
+            <p>ou un pseudo comme vous voulez</p>
+            <form action="." method="POST">
+                <input type="text" name="username">
+                <button type="submit">OK</button>
+        </div><br><br>
+        <div class = chat>
+          <img src="https://www.gif-maniac.com/gifs/53/53111.gif"> <br><br><br>
+          Petit gif qui fait du bien !
+
+        </div>
+      </form>
+    </body>      
+</html>

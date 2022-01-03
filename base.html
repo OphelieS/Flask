@@ -1,0 +1,33 @@
+
+{% block titre %}Liste des contacts{% endblock %}
+
+{% block contenu %}
+<table>
+    <tr>
+        <th>Nom</th>
+        <th>Prénom</th>
+        <th>M. ou Mme</th>
+        <th>pseudo</th>
+    </tr>
+    {% for contact in contact_list %}
+    <tr>
+        <td>{{user1}}</td>
+        <td>{{prenom}}</td>
+        <td>{{sexe}}</td>
+        <td>{{pseudo}}</td>
+    </tr>
+    {% endfor %}
+</table>
+{% endblock %}
+
+<!doctype html>
+<html>
+    <head>
+      <title>HomePage</title>
+      <link rel ="stylesheet" type="text/css" href="{{ url_for('static', filename='main.css') }}">
+    </head>
+    <body>
+      <h1> {{contact}}</h1>
+      <a href="{{ url_for('hello') }}"> Retourner à la page d'accueil </a>
+    </body>
+</html>

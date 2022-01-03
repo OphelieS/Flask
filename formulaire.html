@@ -1,0 +1,29 @@
+<!doctype html>
+<html lang="en">
+    <head>
+      <title>Page Formulaire</title>
+      <link rel ="stylesheet" type="text/css" href="{{ url_for('static', filename='main.css') }}">
+    </head>
+    {% with messages = get_flashed_messages() %}
+    {% if messages %}
+    <ul class=flashes>
+    {% for message in messages %}
+    <li>{{ message }}</li>
+    {% endfor %}
+    </ul>
+    {% endif %}
+    {% endwith %}
+    <body>
+      <h1> Vous êtes sur la page du formulaire</h1>
+      Merci de rentrer vos informations :<br><br>
+      <form action="{{ url_for('formu') }}" method="post">
+        <label>Nom</label> : <input type="text" name="nom" /><br><br>
+        <label>Prénom</label> : <input type="text" name="prenom" /><br><br>
+        <label>Mme ou M.</label> : <input type="text" name="sexe" /><br><br>
+        <label>Pseudo</label> : <input type="text" name="pseudo" />
+        <input type="submit" value="Envoyer" />
+    </form>
+      
+     
+    </body>
+</html>
