@@ -58,6 +58,13 @@ def liste():
     app.close()
     return render_template("base.html", user1= user1,contact = user1)
 
+@app.route("/stat")
+def stat():
+    return render_template("stat.html")
+
+@app.route("/mnist")
+def mnist():
+    return render_template("mnist.html")
 
 
 if __name__ == "__main__":
