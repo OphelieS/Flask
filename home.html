@@ -6,21 +6,24 @@
     </head>
     <body>
         <div class = acceuil>
-            <h1 class="multicolor"> {{ message_home }}</h1>
-            <a href="{{ url_for('suite') }}"> Cliquer sur ce lien pour aller à la page suivante </a><br>
-            <a href="{{ url_for('form') }}"> Cliquer sur ce lien pour aller à la page du formulaire </a><br>
-            <a href="{{ url_for('liste') }}"> Cliquer sur ce lien pour aller à la page des utilisateurs </a>
+            <h1> {{ message_home }}</h1><br>
+            <a id="link" href="{{ url_for('suite') }}"> Cliquer sur ce lien pour aller à la page suivante </a><br><br>
+            <a id="link" href="{{ url_for('form') }}"> Cliquer sur ce lien pour aller à la page du formulaire </a><br><br>
+            <a id="link" href="{{ url_for('liste') }}"> Cliquer sur ce lien pour aller à la page des utilisateurs </a><br><br>
+            <a id="link" href="{{ url_for('stat') }}"> Cliquer sur ce lien pour aller à la page des statistiques d'un dataframe </a><br><br>
+            <a id="link" href="{{ url_for('mnist') }}"> Cliquer sur ce lien pour aller à la page d'affichege de prédiction du modèle MNIST'</a><br><br>
+            
         </div>
         <div class = acceuil2>
-            <h1>Veuillez entrer votre nom</h1>
-            <p>ou un pseudo comme vous voulez</p>
+            <h2>Veuillez entrer votre nom
+            <p>ou un pseudo comme vous voulez</p></h2>
             <form action="." method="POST">
                 <input type="text" name="username">
                 <button type="submit">OK</button>
         </div><br><br>
         <div class = chat>
-          <img src="https://www.gif-maniac.com/gifs/53/53111.gif"> <br><br><br>
-          Petit gif qui fait du bien !
+          <img src="https://i.gifer.com/origin/a4/a4e0920ea865e6911081db8e94fb2b03.gif"> <br><br><br>
+          
 
         </div>
       </form>
