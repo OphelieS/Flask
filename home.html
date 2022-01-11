@@ -1,5 +1,6 @@
 <!doctype html>
 <html>
+  <script src="templates/mon_premier_javas.js"> </script> 
     <head>
       <title>Page d'Ophélie</title>
       <link rel ="stylesheet" type="text/css" href="{{ url_for('static', filename='main.css') }}">
@@ -11,12 +12,12 @@
             <a id="link" href="{{ url_for('form') }}"> Cliquer sur ce lien pour aller à la page du formulaire </a><br><br>
             <a id="link" href="{{ url_for('liste') }}"> Cliquer sur ce lien pour aller à la page des utilisateurs </a><br><br>
             <a id="link" href="{{ url_for('stat') }}"> Cliquer sur ce lien pour aller à la page des statistiques d'un dataframe </a><br><br>
-            <a id="link" href="{{ url_for('mnist') }}"> Cliquer sur ce lien pour aller à la page d'affichege de prédiction du modèle MNIST'</a><br><br>
+            <a id="link" href="{{ url_for('mnist') }}"> Cliquer sur ce lien pour aller à la page d'affichage de prédiction du modèle MNIST</a><br><br>
             
         </div>
         <div class = acceuil2>
-            <h2>Veuillez entrer votre nom
-            <p>ou un pseudo comme vous voulez</p></h2>
+            <h2>Veuillez entrer votre nom ou un pseudo </h2>
+            
             <form action="." method="POST">
                 <input type="text" name="username">
                 <button type="submit">OK</button>
@@ -27,5 +28,6 @@
 
         </div>
       </form>
-    </body>      
+    </body>
+      
 </html>
